@@ -1,0 +1,76 @@
+<view class="page">
+  <view class="weui-cells weui-cells1">
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">课程名称</view>
+      </view>
+      <view class="weui-cell__bd">
+        <input class="weui-input" value='语文' />
+      </view>
+    </view>
+        <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">课程地点</view>
+      </view>
+      <view class="weui-cell__bd">
+        <input class="weui-input" placeholder='课程地点' />
+      </view>
+    </view>
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">课程时间</view>
+      </view>
+      <view class="weui-cell__bd">
+        <input class="weui-input" value='1小时' />
+      </view>
+    </view>
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">课程老师</view>
+      </view>
+      <view class="weui-cell__bd">
+        <input class="weui-input" value='张老师' />
+      </view>
+    </view>
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">开始时间</view>
+      </view>
+      <view class="weui-cell__bd">
+        <picker mode="time" class="weui-input" value="{{time}}" start="09:01" bindchange="bindTimeChange" end="21:01">
+          <view class="picker">
+            {{time}}
+          </view>
+        </picker>
+      </view>
+    </view>
+    <view class="weui-cell weui-cell_input">
+      <view class="weui-cell__hd">
+        <view class="weui-label">结束时间</view>
+      </view>
+      <view class="weui-cell__bd">
+        <picker mode="time" class="weui-input" value="{{time2}}" start="09:01" bindchange="bindTimeChange2" end="21:01">
+          <view class="picker">
+            {{time2}}
+          </view>
+        </picker>
+      </view>
+    </view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_switch">
+        <view class="weui-cell__bd">
+          <view class="weui-label">是否提醒</view>
+        </view>
+        <view class="weui-cell__ft">
+          <view class="weui-input">
+            <switch color='#00a4ff' checked />
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="page__bd page__bd_spacing">
+    <button class="weui-btn" type="lans">保存</button>
+    <button class="weui-btn" type="reds">删除</button>
+  </view>
+</view>

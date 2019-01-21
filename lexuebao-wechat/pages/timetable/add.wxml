@@ -1,0 +1,63 @@
+<view class='time_kc'>
+  <view wx:for="{{kecheng}}">
+    <view bindtap="kecheng" data-key='{{index}}' class="time_kc_xx {{kecheng_hover==index?'hover':''}}">{{item.kc_nr}}</view>
+  </view>
+  <navigator url='lesson/add'>
+    <view class='time_kc_xx'>添加课程</view>
+  </navigator>
+</view>
+<view class='cl'></view>
+<view class="top">
+  <view class="top-text">
+    <view>05</view>
+    <view>月</view>
+  </view>
+  <view wx:for="{{week_day}}" class="top-text">
+    <view class='{{item.k}}'>
+      <view>{{item.week}}</view>
+      <view>{{item.day}}</view>
+    </view>
+  </view>
+</view>
+<scroll-view scroll-y="true" class="scroll">
+  <view style="height:700rpx;width:750rpx;display:flex;border-top:1px solid #e9e8e8;">
+    <view style="background-color:#f8f8f8;color:#666666;">
+      <view wx:for="{{times}}" class="left {{item.class2}}">
+        {{item.name}}
+      </view>
+    </view>
+    <view wx:for="{{[1,2,3,4,5,6,7]}}">
+      <view style="width:750rpx; position: absolute;border-bottom:1rpx dashed #e9e8e8;margin-top:{{(index+1)*100-2}}rpx;box-sizing: border-box;">
+      </view>
+    </view>
+    <!--课表-->
+    <view wx:for="{{sw_kc1}}">
+      <view class="flex-item kcb-item {{item.state==1?'active-tag':''}} {{item.kc_py}}" bindtap="xuanze" data-key='{{index}}' data-statu="open" data-index="{{index}}" style="margin-left:{{(item.xqj-1)*94+10}}rpx;margin-top:{{(item.skjc-1)*100-95}}rpx;height:{{item.skcd*100-10}}rpx;">
+        <view class="smalltext">
+          {{item.state==1?item.kc_nr:''}}
+          <view class="icon iconfont icon-iconfontadd {{item.state==1?'none':''}}"></view>
+        </view>
+      </view>
+    </view>
+    <view wx:for="{{sw_kc}}">
+      <view class="flex-item kcb-item {{item.bg}}" bindtap="showCardView" data-statu="open" data-index="{{index}}" style="margin-left:{{(item.xqj-1)*94+10}}rpx;margin-top:{{(item.skjc-1)*100-95}}rpx;height:{{item.skcd*100-10}}rpx;">
+        <view class="smalltext">{{item.kcmc}}</view>
+      </view>
+    </view>
+    <view wx:for="{{xw_kc1}}">
+      <view class="flex-item kcb-item {{item.state==1?'active-tag':''}} {{item.kc_py}}" bindtap="xuanze2" data-key='{{index}}' data-statu="open" data-index="{{index}}" style="margin-left:{{(item.xqj-1)*94+10}}rpx;margin-top:{{(item.skjc-1)*100+408}}rpx;height:{{item.skcd*90-5}}rpx;">
+        <view class="smalltext"> {{item.state==1?item.kc_nr:''}}
+          <view class="icon iconfont icon-iconfontadd {{item.state==1?'none':''}}"></view>
+        </view>
+      </view>
+    </view>
+    <view wx:for="{{xw_kc}}">
+      <view class="flex-item kcb-item {{item.bg}}" bindtap="showCardView" data-statu="open" data-index="{{index}}" style="margin-left:{{(item.xqj-1)*944+10}}rpx;margin-top:{{(item.skjc-1)*100+408}}rpx;height:{{item.skcd*90-5}}rpx;">
+        <view class="smalltext">{{item.kcmc}}</view>
+      </view>
+    </view>
+  </view>
+</scroll-view>
+<view class="page__bd page__bd_spacing">
+  <button class="weui-btn" type="lans">保存</button>
+</view>

@@ -1,0 +1,195 @@
+@import '/assets/app.wxss';
+@import '/utils/ripples.min.wxss';
+.flex-item {
+  width: 85rpx;
+  height: 80rpx;
+}
+
+.kcb-item {
+  position: absolute;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.smalltext {
+  font-size: 8pt;
+  color: #333;
+  padding-left: 2px;
+}
+
+.top {
+  background-color: #ebf8ff;
+  color: #333;
+  height: 110rpx;
+  font-size: 28rpx;
+}
+
+.top-text {
+  float: left;
+}
+
+.top-text view {
+  line-height: 55rpx;
+  text-align: center;
+  display: block;
+  font-size: 28rpx;
+}
+
+.top-text {
+  width: 12.5%;
+  font-size: 9pt;
+  align-items: center;
+}
+
+.top-text2 {
+  width: 60rpx;
+  height: 100rpx;
+  display: block;
+  margin: 5rpx auto;
+  border-radius: 60rpx;
+  background: #fd6a97;
+  color: #fff;
+}
+
+.scroll {
+  height: 1170rpx;
+  z-index: 101;
+  position: fixed;
+}
+
+.left {
+  width: 90rpx;
+  height: 100rpx;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px dashed #e9e8e8;
+  box-sizing: border-box;
+  color: #666;
+  font-size: 24rpx;
+}
+
+.pinglun_jia {
+  width: 115rpx;
+  height: 115rpx;
+  position: fixed;
+  right: 20rpx;
+  bottom: 20rpx;
+  z-index: 121;
+}
+
+.pinglun_jia image {
+  width: 115rpx;
+  height: 115rpx;
+}
+
+.zixun_a .icon {
+  color: #435774;
+}
+
+.time_head {
+  overflow: hidden;
+  width: 690rpx;
+  margin: 0 auto 30rpx auto;
+}
+
+page {
+  background: #fff;
+}
+
+.time_head_r {
+  font-size: 27rpx;
+  background: #00a4ff;
+  height: 50rpx;
+  line-height: 50rpx;
+  width: 286rpx;
+  float: right;
+  text-align: center;
+  color: #fff;
+  border-radius: 50rpx;
+  margin-top: 20rpx;
+}
+
+.time_head_l {
+  width: 350rpx;
+  float: left;
+}
+
+.time_head_l .icon {
+  margin-left: 10rpx;
+}
+
+.time_head_title {
+  font-size: 33rpx;
+  color: #000;
+}
+
+.time_head_title2 {
+  font-size: 23rpx;
+  color: #666;
+  line-height: 25rpx;
+}
+
+.time_head_title2 .icon {
+  font-size: 18rpx;
+}
+
+.left2 {
+  height: 60rpx;
+  color: #333;
+  font-size: 26rpx;
+  line-height: 60rpx;
+}
+
+.kebiao {
+  width: 750rpx;
+  margin-top: 0rpx;
+  position: absolute;
+  height: 60rpx;
+}
+
+.kebiao2 {
+  margin-top: 460rpx;
+}
+
+.kebiao3 {
+  margin-top: 820rpx;
+}
+
+.kebiao_bs {
+  width: 475rpx;
+  background: #f8f8f8;
+  height: 60rpx;
+  text-align: center;
+  font-size: 26rpx;
+  line-height: 60rpx;
+}
+
+.kebiao_bs .icon {
+  color: #d2d2d2;
+  font-size: 24rpx;
+  margin-left: 10rpx;
+}
+
+.yuwen {
+  background: #ffebf1;
+}
+
+.yingwen {
+  background: #ebffeb;
+}
+
+.shuxue, .meishu, .banhui, .pinde {
+  background: #ebf8ff;
+}
+
+.tiyu, .meishu, .yinyue, .ziran {
+  background: #fff1eb;
+}
+
+.others {
+  background: #fffbe0;
+}
+.mbt20{margin-top: 20rpx;}

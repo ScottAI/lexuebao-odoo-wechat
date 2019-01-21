@@ -1,0 +1,156 @@
+<view class='time_head'>
+  <navigator url='set?'>
+    <view class='time_head_l'>
+      <view class='time_head_title'>小孩课程表
+        <text class='icon iconfont icon-sanjiao_xia'></text>
+      </view>
+      <view class='time_head_title2'>育翔小学 三年级二班
+        <text class='icon iconfont icon-sanjiao_xia'></text>
+      </view>
+    </view>
+    <view class='time_head_r'>2018上学期 3.1-7.1</view>
+  </navigator>
+</view>
+<view class='cl'></view>
+<view class="con-wrap ripple {{cardRightIn?'fadeInRight':''}} {{cardLeftIn?'fadeInLeft':''}}" wx:for="{{week_kecheng}}" wx:if="{{index==currentIndex}}" wx:key="{{item._id}}">
+  <view class='card-box' bindtouchstart="touchstart" bindtouchmove="touchmove" data-index="{{index}}">
+    <view class="top">
+      <view class="top-text">
+        <view>05</view>
+        <view>月</view>
+      </view>
+      <view wx:for="{{item.week_day}}" class="top-text">
+        <view class='{{item.k}}'>
+          <view>{{item.week}}</view>
+          <view>{{item.day}}</view>
+        </view>
+      </view>
+    </view>
+    <view style="height:940rpx;width:730rpx;display:flex;">
+      <view style="background-color:#f8f8f8;color:#666666;">
+        <view wx:for="{{times}}" class="left {{item.class2}}">
+          {{item.name}}
+        </view>
+      </view>
+      <view>
+        <view class='kebiao'>
+          <view class='kebiao_bs'>7:30到校
+            <text class='icon iconfont icon-combinedshapecopy2'></text>
+          </view>
+        </view>
+      </view>
+      <view wx:for="{{[1,2,3,4]}}">
+        <view style="width:750rpx; position: absolute;border-bottom:1rpx dashed #e9e8e8;margin-top:{{(index+1)*100+59}}rpx;box-sizing: border-box;">
+        </view>
+      </view>
+      <view>
+        <view class='kebiao kebiao2'>
+          <view class='kebiao_bs'>午餐及休息
+            <text class='icon iconfont icon-combinedshapecopy2'></text>
+          </view>
+        </view>
+      </view>
+      <view wx:for="{{[5,6,7,8]}}">
+        <view style="width:750rpx; position: absolute;border-bottom:1rpx dashed #e9e8e8;margin-top:{{(index+1)*100+419}}rpx;">
+        </view>
+      </view>
+      <view>
+        <view class='kebiao kebiao3'>
+          <view class='kebiao_bs'>放学
+            <text class='icon iconfont icon-combinedshapecopy2'></text>
+          </view>
+        </view>
+      </view>
+      <!--课表-->
+      <view wx:for="{{item.sw_kc}}">
+        <view class="flex-item kcb-item {{item.bg}}" bindtap="showCardView" data-statu="open" data-index="{{index}}" style="margin-left:{{(item.xqj-1)*94+10}}rpx;margin-top:{{(item.skjc-1)*100-35}}rpx;height:{{item.skcd*100-10}}rpx;">
+          <navigator url='lesson/detailed'>
+            <view class="smalltext">{{item.kcmc}}</view>
+          </navigator>
+        </view>
+      </view>
+      <view wx:for="{{item.xw_kc}}">
+        <view class="flex-item kcb-item {{item.bg}}" bindtap="showCardView" data-statu="open" data-index="{{index}}" style="margin-left:{{(item.xqj-1)*94+10}}rpx;margin-top:{{(item.skjc-1)*100+600-73}}rpx;height:{{item.skcd*90-5}}rpx;">
+          <navigator url='lesson/detailed'>
+            <view class="smalltext">{{item.kcmc}}</view>
+          </navigator>
+        </view>
+      </view>
+    </view>
+    <view wx:if="{{index==1}}">
+      <view class="top">
+        <view class="top-text">
+          <view>05</view>
+          <view>月</view>
+        </view>
+        <view wx:for="{{item.week_day}}" class="top-text">
+          <view class='{{item.k}}'>
+            <view>{{item.week}}</view>
+            <view>{{item.day}}</view>
+          </view>
+        </view>
+      </view>
+      <view style="height:1000rpx;width:730rpx;display:flex;">
+        <view style="background-color:#f8f8f8;color:#666666;">
+          <view wx:for="{{times}}" class="left {{item.class2}}">
+            {{item.name}}
+          </view>
+        </view>
+        <view>
+          <view class='kebiao'>
+            <view class='kebiao_bs'>7:30到校
+              <text class='icon iconfont icon-combinedshapecopy2'></text>
+            </view>
+          </view>
+        </view>
+        <view wx:for="{{[1,2,3,4]}}">
+          <view style="width:750rpx; position: absolute;border-bottom:1rpx dashed #e9e8e8;margin-top:{{(index+1)*100+59}}rpx;box-sizing: border-box;">
+          </view>
+        </view>
+        <view>
+          <view class='kebiao kebiao2'>
+            <view class='kebiao_bs'>午餐及休息
+              <text class='icon iconfont icon-combinedshapecopy2'></text>
+            </view>
+          </view>
+        </view>
+        <view wx:for="{{[5,6,7,8]}}">
+          <view style="width:750rpx; position: absolute;border-bottom:1rpx dashed #e9e8e8;margin-top:{{(index+1)*100+419}}rpx;">
+          </view>
+        </view>
+        <view>
+          <view class='kebiao kebiao3'>
+            <view class='kebiao_bs'>放学
+              <text class='icon iconfont icon-combinedshapecopy2'></text>
+            </view>
+          </view>
+        </view>
+        <!--课表-->
+        <view wx:for="{{item.sw_kc}}">
+          <view class="flex-item kcb-item {{item.bg}}" bindtap="showCardView" data-statu="open" data-index="{{index}}" style="margin-left:{{(item.xqj-1)*94+10}}rpx;margin-top:{{(item.skjc-1)*100-35}}rpx;height:{{item.skcd*100-10}}rpx;">
+            <navigator url='lesson/detailed'>
+              <view class="smalltext">{{item.kcmc}}</view>
+            </navigator>
+          </view>
+        </view>
+        <view wx:for="{{item.xw_kc}}">
+          <view class="flex-item kcb-item {{item.bg}}" bindtap="showCardView" data-statu="open" data-index="{{index}}" style="margin-left:{{(item.xqj-1)*94+10}}rpx;margin-top:{{(item.skjc-1)*100+600-73}}rpx;height:{{item.skcd*90-5}}rpx;">
+            <navigator url='lesson/detailed'>
+              <view class="smalltext">{{item.kcmc}}</view>
+            </navigator>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view wx:else>
+      <view class="page__bd page__bd_spacing mbt20">
+        <button class="weui-btn" type="lans">新增课程表</button>
+      </view>
+    </view>
+  </view>
+</view>
+<navigator url='add'>
+  <view class='pinglun_jia'>
+    <image src='/assets/images/kecheng.png'></image>
+  </view>
+</navigator>

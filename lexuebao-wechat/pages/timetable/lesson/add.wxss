@@ -1,0 +1,139 @@
+@import '/assets/app.wxss';
+
+.button-hover[type=lans] {
+  color: rgba(255, 255, 255, 0.6);
+  background-color: #00a4ff;
+}
+
+.button-hover {
+  color: rgba(0, 0, 0, 0.6);
+  background-color: #dedede;
+}
+
+button[type=lans] {
+  color: #fff;
+  background-color: #00a4ff;
+}
+
+.button-sp-area {
+  margin: 0 auto;
+  padding-top: 15px;
+  width: 60%;
+}
+
+.mini-btn {
+  margin-right: 5px;
+}
+
+.weui-cells1 {
+  margin-top: 1px;
+}
+
+.weui-cells2 {
+  margin-top: 20rpx;
+}
+
+.weui-cells2::before, .weui-cells1::before {
+  border: none;
+}
+
+.weui-cell {
+  padding: 5px 15px;
+}
+
+.weui-cell:before {
+  border-top: 1px solid #eee;
+}
+
+.weui-cells2::after, .weui-cells1::after {
+  border: none;
+}
+
+.page__bd_spacing {
+  margin-bottom: 20px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  margin-top: 20rpx;
+}
+
+.hh {
+  height: 10px;
+  width: 100%;
+  background: #f1f1f1;
+}
+
+.page__bd {
+  padding-bottom: 0px;
+}
+
+.biaoqian {
+  padding: 3px 12px;
+  border-radius: 20px;
+  float: left;
+  margin-right: 10px;
+  background: #f4f5f8;
+  margin-bottom: 20px;
+  margin-left: 10px;
+  font-size: 14px;
+}
+
+.biaoqian .icon {
+  color: #ed8432;
+}
+
+.mb0 {
+  margin-bottom: 0;
+}
+
+.cl {
+  clear: both;
+}
+
+.weui-uploader__input-box:before, .weui-uploader__input-box:after {
+  font-size: none;
+  background: none;
+}
+
+.weui-uploader__input {
+  opacity: 1;
+  background: #f4f5f8;
+  color: #999899;
+  font-size: 16px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.weui-uploader__input-box {
+  width: 233rpx;
+  height: 233rpx;
+  border: none;
+  border-radius: 20rpx;
+}
+
+.weui-uploader__input .icon {
+  font-size: 40px;
+  display: block;
+  text-align: center;
+  color: #999899;
+  padding-top: 40rpx;
+  margin-bottom: -10rpx;
+}
+
+.weui-input {
+  text-align: right;
+  font-size: 30rpx;
+  color: #333;
+}
+
+.weui-label {
+  font-size: 30rpx;
+  color: #333;
+}
+
+.page {
+  background: #f8f8f8;
+}
+
+.weui-select{border:none;text-align: right;font-size: 30rpx;}
+picker{margin-right: -15px;}
+.weui-select::after,.weui-select::before{border-width: 0px 2px 2px 0;}

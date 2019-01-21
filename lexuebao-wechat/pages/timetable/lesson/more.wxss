@@ -1,0 +1,7 @@
+@import '/assets/app.wxss';
+.icons image{width: 60rpx;height:50rpx;display:inline-block;
+}
+.icons{width: 60rpx;margin-right: 5rpx;}
+.weui-cells{margin-bottom: -1px;}
+.weui-cell{padding: 15px 15px;}
+.weui-cell .icon{color:#00a4ff;font-size: 45rpx; margin-right:10px;}
